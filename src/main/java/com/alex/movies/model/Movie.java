@@ -8,9 +8,11 @@ import javax.validation.constraints.PastOrPresent;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @Document
 public class Movie {
 

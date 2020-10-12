@@ -71,13 +71,14 @@ public class MovieServiceImpl implements MovieService {
 					i++;
 					continue;
 				}
-				Movie movie = new Movie();
-				movie.setTitle(values[0]);
-				movie.setDirector(values[1]);
-				movie.setGenre(values[2]);
-				movie.setRating(values[3]);
-				movie.setCast(values[4]);
-				movie.setDuration(LocalTime.parse(values[5]));
+				Movie movie = Movie.builder()
+						.title(values[0])
+						.director(values[1])
+						.genre(values[2])
+						.rating(values[3])
+						.cast(values[4])
+						.duration(LocalTime.parse(values[5]))
+						.build();
 				repo.save(movie);
 
 			}
